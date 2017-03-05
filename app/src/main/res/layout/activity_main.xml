@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.administrator.cehuamianban.ui.DragDayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@mipmap/bg"
+    android:id="@+id/dl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+    <LinearLayout
+        android:background="#4400ff00"
+        android:paddingLeft="10dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="50dp"
+        android:paddingTop="50dp"
+        android:id="@+id/ll_left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <ListView
+            android:id="@+id/lv_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+
+    </LinearLayout>
+    <com.example.administrator.cehuamianban.ui.MyLinearLayout
+
+        android:background="#44ff0000"
+        android:orientation="vertical"
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#18b6ef"
+            >
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lv_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </com.example.administrator.cehuamianban.ui.MyLinearLayout>
+
+
+</com.example.administrator.cehuamianban.ui.DragDayout>
