@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView lv_main = (RecyclerView) findViewById(R.id.lv_main);
         final DragDayout dragDayout = (DragDayout) findViewById(dl);
         dragDayout.setOnDragDayoutListener(new DragDayout.OnDragDayoutListener() {
+            public static final String TAG ="dfdsg" ;
+
             @Override
             public void onClose() {
                 utils.showToast(getApplicationContext(), "onClose");
@@ -53,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             public void onOpen() {
                 utils.showToast(getApplicationContext(), "onOpen");
                 lv_left.smoothScrollToPosition(new Random().nextInt(50));
+                Log.i(TAG, "onOpen: ");
             }
 
             @Override
